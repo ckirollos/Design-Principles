@@ -1,0 +1,27 @@
+
+### Composition
+Composition is one of the fundamental concepts in object-oriented programming. It happens when 
+classes instantiate references to other objects (Compose them) to be part of the class' structure.
+
+### The Object Composing Principle states that
+classes should achieve code reuse through composition rather than inheritance.
+
+### Intent
+More code that isn't tightly couplied, means that more resuable code.
+
+### Tight coupling in inheritence
+While other principles mention the issues related to tightly coupled software systems, this principle
+extends these concerns to mention that over use of inheritence can lead to the same issues.
+The fact that when a class inherites from a superclass, the subclass receives all the superclass
+related data, which can lead in some cases to a tightly coupled relation between the two classes.
+
+### Dynamic behaviors
+One thing that inheritence can't provide, is the ability to extend classes and behaviors at 
+the run-time. It's not the same when using object composition.
+
+### How to respect the design principle
+With classes composing other objects, classes can reuse other parts without even the knowladge 
+of those parts as long as they provide the expected behavior,
+while allowing both the class and the composed object's class to develop independently.
+Classes can compose objects either by keeping a reference to the object's interface, or by defining
+the class itself to be one of the classes that implements the interface.
