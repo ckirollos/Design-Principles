@@ -1,0 +1,17 @@
+
+### Interfaces
+interfaces define the expected behavior from the concrete classes, by encapsulate a set of them.
+When a class implements an interface, it must define those behaviors.
+
+### Interface Segregation Principle states that
+no code should be forced to depend on methods it does not use
+
+### Intent
+Interfaces should be split up in such a way that they can properly describe the separate 
+functionalities of the system.
+
+### How to respect the design principle
+A poor interface design would entail a single interface for all behaviors of a subsystem, That is this
+interface encapsulates a lot. By seperating the interface into smaller interfaces, the concrete classes
+would not need to provide implementations for methods that doesn't make sense 
+for them (dummy implementations).
