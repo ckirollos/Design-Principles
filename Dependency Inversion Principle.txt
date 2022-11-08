@@ -1,0 +1,41 @@
+
+### From Wiki:
+> In object-oriented design, the dependency inversion principle is a specific methodology 
+> for loosely coupling software modules. When following this principle, 
+> the conventional dependency relationships established from high-level,
+> policy-setting modules to low-level, dependency modules are reversed,
+> thus rendering high-level modules independent of the low-level module implementation details.
+
+
+### Dependency Inversion Principle states that
+high-level modules should depend on high-level generalizations, and not on low-level details. 
+This keeps client classes independent of low-level functionality.
+
+### Intent
+Generalize the behaviors of your concrete classes into abstract classes and interfaces.
+Put emphasis on high-level dependency over low-level concrete dependency.
+
+### Software dependency (coupling)
+Software parts directly interacting with other parts, are said to be tightly coupled. This means that
+it is hard to make changes for those parts without affecting the rest of the parts.
+It is not alaways a bad thing, and tight coupling may show up at some point during 
+the development of the software. The Principle helps to put constraints about the level of dependency
+the system will rely on.
+
+### Low-Level Dependency
+In a low-level dependency, classes have direct references to a concrete classes (classes that names 
+a specific implementation). Now changes can not be easly introduced without changing other classes
+
+### High-Level Dependency
+In high-level dependency, classes is dependent on a high-level generalization rather than 
+a low-level concrete class. These high-level generalizations are encapsulated either in an abstract
+class or an interface. Now changes to be more easily made to resources 
+(classes that implements the generalizations) without affecting the rest of the software system.
+
+### How to respect the design principle
+The main goal when reviewing different classes & their interactions is to outline & generalize into
+subsystems with different levels of dependencies, this way encapsulating the subsystem 
+into series of expected behaviors can be achieved. More general classes such as client code can deal
+with different subsystems through generlizations and never on the concrete classes. In the end,
+client subsystem is expecting certain behaviors, these behaviors are expected to develop independently
+without having to mention that development in the client code.
