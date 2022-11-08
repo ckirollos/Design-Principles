@@ -1,0 +1,35 @@
+
+### From wiki:
+> The name open–closed principle has been used in two ways. Both ways use 
+> generalizations (for instance, inheritance or delegate functions) to resolve 
+> the apparent dilemma, but the goals, techniques, and results are different.
+
+### The Open/Closed Principle states that
+software parts (classes, functions, etc.) should be open for extension, but closed for modification.
+
+### Intent
+Classes & Functions should allow for extension by other parts, in a way that no modification is done
+to their source code.
+
+### Ways to extend
+Typical way of extension in most of Object-Oriented Programming Languages can be seen in inheritence.
+It's the nature of the language that decides the typical way of extension, 
+but that doesn't mean it's the only tool for it.
+Delegation or Cloning can be also ways to get the same effect in the extended parts.
+
+### How to respect the design principle
+A class is considered “closed” to editing once it has:
+-Been tested to be functioning properly. The class should
+behave as expected.
+-All the attributes and behaviors are encapsulated.
+-Been proven to be stable within your system. The class
+or any instance of the class should not stop your system
+from running or do it harm.
+During development the class changes can be done frequently, or at some points.
+The closed part of the principle does not mean that once a class is considered closed, no development
+can be done for it, but it directs the programmer that the class development & changes should
+lead towards making the class closed for changes.
+The open part of the principle is met by choosing a way to extend the class, and regardless of the way,
+The extended parts should follow the same intent.
+Worth mentioning that all design patterns use the open/closed principle in some way.
+Whether the pattern uses interfaces, abstract classes or classes.
