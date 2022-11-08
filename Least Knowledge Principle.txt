@@ -1,0 +1,38 @@
+
+### From wiki
+> The Law of Demeter (LoD) or principle of least knowledge is a design guideline 
+> for developing software, particularly object-oriented programs. In its general form,
+> the LoD is a specific case of loose coupling. The guideline was proposed by 
+> Ian Holland at Northeastern University towards the end of 1987.
+> It is so named for its origin in the Demeter Project, an adaptive programming 
+> and aspect-oriented programming effort. The project was named in honor of Demeter, 
+> “distribution-mother” and the Greek goddess of agriculture, to signify a bottom-up 
+> philosophy of programming which is also embodied in the law itself.
+
+### Least Knowledge Principle states that
+classes (modules) should know and interact with as few other classes as possible.
+
+### Intent
+Loose coupling between classes by limiting their interactions, if classes have a 
+narrow view of what other classes it knows, then coupling is decreased, and a system is 
+easier to maintain.
+
+### How to respect the design principle
+The four rules of the principle can be summarized in: a method, M, of an object should only
+call other methods if they are:
+-Encapsulated within the same object.
+-Encapsulated within an object that is in the parameters of M.
+-Encapsulated within an object that is instantiated inside the M.
+-Encapsulated within an object that is referenced in an instance variable of the class for M.
+These conditions commonly occure when you have a chain method calls to objects you should not know 
+about, or when you use methods from an “unknown” type of object that is returned back to you
+from your local method call. 
+This means that the method should not call or invoke other methods on objects different than 
+the outlined objects (objects that consider local or friends) above.
+The Law of Demeter defines how classes should interact with each other. They should not 
+have full access to the entire system because this causes a high degree of coupling
+
+### Disadvantages
+The biggest disadvantage when commiting to this design principle is that it requires more time for
+designing & space for resources
+
