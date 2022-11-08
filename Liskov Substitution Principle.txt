@@ -1,0 +1,43 @@
+
+## From wiki:
+> The Liskov substitution principle (LSP) is a particular definition of a subtyping relation, 
+> called strong behavioral subtyping, 
+> that was initially introduced by Barbara Liskov in a 1988 conference keynote address
+> titled Data abstraction and hierarchy. 
+> It is based on the concept of "substitutability"
+
+In general, subtyping is knowing as a relation between general type that has fewer 
+fields (called supertype) and a subtype which has more than those fields. In functions, parameters 
+and return types subtyping is used to decide which arguments can be passed to a function,
+and which types can be returned (functions are contravariance when it comes to the parameters, and
+covariance when it comes to the return type).
+
+### Liskov substitution principle states that:
+if S is a subtype of T, then S can replace all the instances of T without changing the software's
+expected behavior.
+
+### Intent
+Extension of some part of the system should lead to a software that is correct.
+
+### Modularity Of Classes
+Most object-oriented programming languages allow inheritence through classes. A class represents
+a module part that encasulates & manipulates data.
+By inheriting from a class (superclass), a new class (subclass) ineherites all attributes
+and behaviors from that superclass, in this case the superclass is more general, and the subclass
+can become more specialized by extending the superclass' atrributes & behaviors.
+But inheritence adds more than subclassing to the system, it becomes the relation of subtyping.
+It is common to get confused, but subclassing and subtyping are two differnt concepts, and inheritence
+gives both.
+
+### How to respect the design principle
+When thinking about extending & inheriting from a class, a few contraints should be met:
+-The standard requirments on methods (functions), covariance of the returned type and contravariance
+of the parameter type.
+-Preconditions cannot be strengthened in the subtype. That is the subtype should not add more
+conditions to the method calls of the supertype.
+-Postconditions cannot be weakened in the subtype. That is the subtype should keep the program's
+state after the execution of the supertype's method call the same as it was called from an instance
+of the supertype.
+-Invariants must be preserved in the subtype. That is invariant conditions that exist in the 
+base class, must also remain invariant in the subclass.
+-Immutable characteristics of a base class must not be changed by the subclass.
